@@ -16,9 +16,9 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      min-height: 100vh;
       padding: 20px;
-      overflow: hidden;
+      overflow-x: hidden;
     }
 
     .container {
@@ -79,6 +79,7 @@
       backdrop-filter: blur(10px);
       text-align: left;
       display: none;
+      word-break: break-word;
     }
 
     .verdict {
@@ -116,6 +117,38 @@
     .caution { background: rgba(255,165,0,0.3); color: #FFD580; }
     .suspicious { background: rgba(255,0,0,0.3); color: #FF7B7B; }
     .phishing { background: rgba(139,0,0,0.3); color: #FF4444; }
+
+    /* Mobile responsiveness */
+    @media (max-width: 480px) {
+      .container {
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      .url-input {
+        flex-direction: column;
+      }
+
+      input, button {
+        width: 100%;
+      }
+
+      .result {
+        padding: 15px;
+      }
+
+      .verdict {
+        font-size: 1.1rem;
+      }
+
+      .badge {
+        font-size: 0.8rem;
+        padding: 5px 10px;
+      }
+    }
   </style>
 </head>
 <body>
